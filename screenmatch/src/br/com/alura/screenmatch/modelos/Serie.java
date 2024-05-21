@@ -6,6 +6,10 @@ private boolean ativa;
 private int EPT;  /// EPISODIOS POR TEMPORADA
 private int MPE;  /// MINUTOS POR EPISODIO
 
+    public Serie(String nome, int ADL) {
+        super(nome, ADL);
+    }
+
     public int getTemp() {
         return temp;
     }
@@ -41,5 +45,10 @@ private int MPE;  /// MINUTOS POR EPISODIO
     @Override
     public int getDM() {
         return temp * EPT * MPE;
+    }
+
+    @Override
+    public String toString() {
+        return "Serie" + this.getNome() + "(" + this.getADL() + ")";
     }
 }
